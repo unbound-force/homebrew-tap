@@ -3,7 +3,7 @@ cask "gaze" do
   name "gaze"
   desc "Test quality analysis via side effect detection for Go"
   homepage "https://github.com/unbound-force/gaze"
-  version "1.2.6"
+  version "1.2.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "gaze" do
   on_macos do
     on_intel do
       url "https://github.com/unbound-force/gaze/releases/download/v#{version}/gaze_#{version}_darwin_amd64.tar.gz"
-      sha256 "efb777dc89515193d8079dee1f846a3e408a3b684495707c59fef1859bbf0c9a"
+      sha256 "b447452ee534889abcc04b4dc4e775fe6bf07d7c78588e9e783fd8a0d1ecebfa"
     end
     on_arm do
       url "https://github.com/unbound-force/gaze/releases/download/v#{version}/gaze_#{version}_darwin_arm64.tar.gz"
-      sha256 "ed4838343df127d371ed2fa64afd6161822207db5311c67713fa1343417abf68"
+      sha256 "325190e4adeb496bb99cd96e942ddde0bd96ba77a2cfcd6929a2c4eb3bc36e83"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/unbound-force/gaze/releases/download/v#{version}/gaze_#{version}_linux_amd64.tar.gz"
-      sha256 "ead7c35d7850394f6c7eda2f2182651fcd282cf0193b8e7d02990fabaa6b64d2"
+      sha256 "c7f4b7365c652dd347fe6f78a8fba35ca43aa92bfe830807d4c412ed2edb053f"
     end
     on_arm do
       url "https://github.com/unbound-force/gaze/releases/download/v#{version}/gaze_#{version}_linux_arm64.tar.gz"
-      sha256 "834707cb92c3a75edf672f10b286e0cba4fa24b2f495b9d1b8d850e5f2265a16"
+      sha256 "d6e08f902f1e45a973a448288448913bf47951b6060d5fe40f4c4e3142da70f0"
     end
   end
 
