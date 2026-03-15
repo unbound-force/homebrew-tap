@@ -14,11 +14,11 @@ cask "gaze" do
   on_macos do
     on_intel do
       url "https://github.com/unbound-force/gaze/releases/download/v#{version}/gaze_#{version}_darwin_amd64.tar.gz"
-      sha256 "0d9b0d82748e15867c44c64abd27c101f00dad15a08e43fce32db28becf4afa7"
+      sha256 "59f1af7c062da479085f4d7aa338cbe06284e1fd4b913f760e1896d581b6dce2"
     end
     on_arm do
       url "https://github.com/unbound-force/gaze/releases/download/v#{version}/gaze_#{version}_darwin_arm64.tar.gz"
-      sha256 "d907eedbdd6707a17f24c0e5736555ed2a6ad21d83a0b431e2188ff812c9473b"
+      sha256 "be7555678723621c76d5810698a2f3c6126e6d2417f26d31e23d45029b539cbc"
     end
   end
 
