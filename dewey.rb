@@ -5,23 +5,23 @@
 class Dewey < Formula
   desc "Knowledge graph MCP server with persistence, semantic search, and pluggable content sources"
   homepage "https://github.com/unbound-force/dewey"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "ollama" => :recommended
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/unbound-force/dewey/releases/download/v0.1.0/dewey_0.1.0_darwin_amd64.tar.gz"
-      sha256 "ddc1beaad233df5bb602c2623d564be4471e1f6e0f5182aa4eb05e4a58f683b7"
+      url "https://github.com/unbound-force/dewey/releases/download/v0.1.1/dewey_0.1.1_darwin_amd64.tar.gz"
+      sha256 "c498514fab64b367b072fb71f3b4285d04d5efd6e4116114d6a586d4ed56c7b5"
 
       define_method(:install) do
         bin.install "dewey"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/unbound-force/dewey/releases/download/v0.1.0/dewey_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3441ffd70effdde04276a35ae2af91f85dc2f2af00368c3d3d80eb1dbd2dd0f1"
+      url "https://github.com/unbound-force/dewey/releases/download/v0.1.1/dewey_0.1.1_darwin_arm64.tar.gz"
+      sha256 "09b9982eee17b6a3edd682285d6123b51185f25a1d784f9aa1c9b59079eb3d04"
 
       define_method(:install) do
         bin.install "dewey"
@@ -31,15 +31,15 @@ class Dewey < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/unbound-force/dewey/releases/download/v0.1.0/dewey_0.1.0_linux_amd64.tar.gz"
-      sha256 "f2875fdcad16a3b23bdfc230b8f5bce74c5541dc594210bca6e6531a1815555f"
+      url "https://github.com/unbound-force/dewey/releases/download/v0.1.1/dewey_0.1.1_linux_amd64.tar.gz"
+      sha256 "597f3b0478fc3d135703b19d35b1e8c1dc6d7f29af47d98913b0063ddb82efa4"
       define_method(:install) do
         bin.install "dewey"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/unbound-force/dewey/releases/download/v0.1.0/dewey_0.1.0_linux_arm64.tar.gz"
-      sha256 "54e532a1db49a89e9ed0bdc76ad9b17c5bc5828ab0485cd116f9ff1fb5f123e7"
+      url "https://github.com/unbound-force/dewey/releases/download/v0.1.1/dewey_0.1.1_linux_arm64.tar.gz"
+      sha256 "0ebc65d5888d181be89c83e1013d9f8cfc6b07bf50c677d8db74ea46f798988b"
       define_method(:install) do
         bin.install "dewey"
       end
