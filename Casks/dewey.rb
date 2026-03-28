@@ -3,7 +3,7 @@ cask "dewey" do
   name "dewey"
   desc "Knowledge graph MCP server with persistence, semantic search, and pluggable content sources"
   homepage "https://github.com/unbound-force/dewey"
-  version "0.2.0"
+  version "0.5.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -11,28 +11,28 @@ cask "dewey" do
 
   binary "dewey"
   depends_on cask: [
-      "ollama",
+      "ollama-app",
     ]
 
   on_macos do
     on_intel do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_darwin_amd64.tar.gz"
-      sha256 "6980460b4f4e6dda44f2be26416c93483019d5e88c2e049bdbee70903f1315cc"
+      sha256 "e7aedd53fd63223525d303743952c20d15372df69dd31c04ab6cb6ba292d0fca"
     end
     on_arm do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_darwin_arm64.tar.gz"
-      sha256 "59ce664ca51587a9b65f2de99aea4ed77a4aec6037e309d07a251044987c1c3c"
+      sha256 "e6a15d565f629d0b63f448b95617f6e5560a4338ac9bb6a1adbf5e03c572a741"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_linux_amd64.tar.gz"
-      sha256 "f571ef5a0d5aeded38461397888e742485423dc5edb7f698cc70e2d890b3318d"
+      sha256 "5bd901be71e2c91e18b6f2fa71e46df4548bb58d31e97eae32b1a76081ce82d8"
     end
     on_arm do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_linux_arm64.tar.gz"
-      sha256 "eb0d1815ece41066291ef7a4fbdbdbb6785562dcb9317a3141e71d9dc99d6063"
+      sha256 "9b8eb40088a7f82ec8be6b06e20bc9ce52966d3b1faabba01f6db7309c53f997"
     end
   end
 
