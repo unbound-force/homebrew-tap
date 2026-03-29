@@ -3,7 +3,7 @@ cask "dewey" do
   name "dewey"
   desc "Knowledge graph MCP server with persistence, semantic search, and pluggable content sources"
   homepage "https://github.com/unbound-force/dewey"
-  version "1.3.0"
+  version "1.3.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "dewey" do
   on_macos do
     on_intel do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_darwin_amd64.tar.gz"
-      sha256 "ea51c545439d92c4031e52fe781ac1f03211c8241580f41dbe42f429085f984d"
+      sha256 "91109e0829d376632731b1b37345cd45a9cb644054a9ae20bdaec9d816b2f3b9"
     end
     on_arm do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_darwin_arm64.tar.gz"
-      sha256 "c4d6968ac01e2db710294c5e10b8caa298c2a682b72b88d6999e315ca625bfa6"
+      sha256 "7bce77997d7156fa0f26e3e1cdca99ecad5edb69af2eed126193d24049f15574"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_linux_amd64.tar.gz"
-      sha256 "71e18f5798f0999f0a9743541b47ea17947dc96f066fa57d4c9e685eeed6919d"
+      sha256 "a7df33b95d7b6e699918c1f063c2481ba1a76e2e740a1006730f575ddc9a964b"
     end
     on_arm do
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_linux_arm64.tar.gz"
-      sha256 "2d7108f06cee1228eef2c7aa925bf9913ffc28c1917cf43a7619c45d5a06fee2"
+      sha256 "9929988dfe93f489af2b9fec47e090f2532abb1f6be0acf414866625ef4653dc"
     end
   end
 
