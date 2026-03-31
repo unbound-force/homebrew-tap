@@ -31,9 +31,12 @@ cask "dewey" do
   livecheck do
     skip "Auto-generated on release."
   end
-  depends_on cask: [
-      "ollama-app",
-    ]
+
+  if OS.mac?
+    depends_on cask: "ollama-app"
+  else
+    depends_on formula: "ollama"
+  end
 
   binary "dewey"
 
