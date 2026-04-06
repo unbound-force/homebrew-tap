@@ -14,7 +14,7 @@ cask "replicator" do
   on_macos do
     on_arm do
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_darwin_arm64.tar.gz"
-      sha256 "536db496043e7c1954729a3ea52b4a429b6669bc604f406c2267b4642e0ce29d"
+      sha256 "75708b8b2d220278c129d6599b713ce65484209141ad91e2d71dbc28808f81b9"
     end
   end
 
