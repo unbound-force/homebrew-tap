@@ -3,7 +3,7 @@ cask "unbound-force" do
   name "unbound-force"
   desc "Unbound Force specification framework toolkit"
   homepage "https://github.com/unbound-force/unbound-force"
-  version "0.9.0"
+  version "0.10.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "unbound-force" do
   on_macos do
     on_intel do
       url "https://github.com/unbound-force/unbound-force/releases/download/v#{version}/unbound-force_#{version}_darwin_amd64.tar.gz"
-      sha256 "11c2d03829dadf5b0cb573bb97350f5c79818e770905e28a9c070bea086d02d2"
+      sha256 "8529c7a13ffbc31ca69623a6c26481b1a8b1ba3727ad34f5cef5b9fcd0f59c78"
     end
     on_arm do
       url "https://github.com/unbound-force/unbound-force/releases/download/v#{version}/unbound-force_#{version}_darwin_arm64.tar.gz"
-      sha256 "80fc729c84ee793199750a15b3b3cc62e626c5c291f5b5da22373675ee7ad538"
+      sha256 "01daebe85eb101dcbc251fbe544b35ae6f113b89bb95dd660735296191780da6"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/unbound-force/unbound-force/releases/download/v#{version}/unbound-force_#{version}_linux_amd64.tar.gz"
-      sha256 "0dacbc8e9e60829f3c5e111a3bd1be9aa8c8fe186a44fbe6043ace7186d4c161"
+      sha256 "459f99605076f8171a49162331cd2b50459b0ae55b37681dc7889365e7f8ead6"
     end
     on_arm do
       url "https://github.com/unbound-force/unbound-force/releases/download/v#{version}/unbound-force_#{version}_linux_arm64.tar.gz"
-      sha256 "1c3588ef86f396725792f52b8280213452b854a983e3aa45e65c9d4eb76fe0d3"
+      sha256 "07dc361a5b8db731f6ca738ef063b899b01186d28a04946a993cf9f704cf96c3"
     end
   end
 
