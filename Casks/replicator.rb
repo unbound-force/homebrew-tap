@@ -3,7 +3,7 @@ cask "replicator" do
   name "replicator"
   desc "Multi-agent coordination for AI coding agents"
   homepage "https://github.com/unbound-force/replicator"
-  version "0.2.0"
+  version "0.3.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,18 +14,18 @@ cask "replicator" do
   on_macos do
     on_arm do
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_darwin_arm64.tar.gz"
-      sha256 "75708b8b2d220278c129d6599b713ce65484209141ad91e2d71dbc28808f81b9"
+      sha256 "be27a6fa4fcad33323db87637bbc7eb5fef43d634c2c51482eac94ae99b5a4bf"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_linux_amd64.tar.gz"
-      sha256 "99ddc552eecc7a90c41c5753337dcd70d9a6b44dd0652ddb1cf23b8e3e716358"
+      sha256 "e52db40f4e8f5ac9b859245e3140395096cbbf31ebffe20f1ca6d3369a477a68"
     end
     on_arm do
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_linux_arm64.tar.gz"
-      sha256 "8c6c7022f6de34d8ea1eb2f45ad300123b77a44307e1db097051b2114a2de88b"
+      sha256 "719ab572e613e9f7db77b1603a9e173a7746414faada525a932d0750c043a83d"
     end
   end
 
