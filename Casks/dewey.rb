@@ -4,18 +4,18 @@ cask "dewey" do
 
   on_macos do
     on_intel do
-      sha256 "51d87c3382167bf54283f2a3955f1e4f40d46cdd948d288be6ebc32ece48e934"
+      sha256 "7cdbd58a529198195387732c37cfdee5b363b95dbc2a9914185c17f677de6b60"
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "7cdbd58a529198195387732c37cfdee5b363b95dbc2a9914185c17f677de6b60"
+      sha256 "4ef7ee73ec26ac58c2880d1d1f8127c4cfde6c579d34c6bc1699924afb9673a4"
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "4ef7ee73ec26ac58c2880d1d1f8127c4cfde6c579d34c6bc1699924afb9673a4"
+      sha256 "a1ca04b12d22dcf3e934d2694ce761ef22829551ec60ef5c12c16095769ee034"
       url "https://github.com/unbound-force/dewey/releases/download/v#{version}/dewey_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
