@@ -6,21 +6,21 @@ cask "replicator" do
     end
   end
 
-  version "0.5.4-rc2"
+  version "0.5.4"
 
   on_macos do
     on_arm do
-      sha256 "5a8d24fe017bc07a26a99dd7d603dc4d07a6709e3de8f5732cc035bb2bfe9a6a"
+      sha256 "c6e47553351357fe76a3dd39f590aeeb40a33454f0346d10e0da1624f82d1e9f"
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_darwin_arm64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b46b747f99077623944fb1e2121ee0b0ef8a848656e84a81cc8abeb138061b5a"
+      sha256 "6b8691e6460e07126556fb23b33040056d408910183f18ea498c94f435ca0ef5"
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c8235720ff81a8cadb479f631021440a1f9947597d4dc31d8605f3338bb7e764"
+      sha256 "a10e630c277a9c8a4047671a9b30d4103ff18662d6285bc2336c8d94e7cf4f83"
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_linux_amd64.tar.gz"
     end
   end
