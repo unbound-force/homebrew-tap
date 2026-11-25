@@ -1,0 +1,59 @@
+# CI: check the tap on every pull request.
+#
+# - brew readall loads every cask and formula for every OS and arch, so a
+#   syntax error or a bad stanza fails here, not on a user's machine.
+# - Each cask gets the same audit the release workflows (jflowers/ship's
+#   go-release.yml) run before they push a cask here. token_conflicts flags
+#   a cask named like a homebrew/core formula (gaze), a rule for
+#   homebrew/cask, not a third-party tap.
+# - The formula isn't audited: GoReleaser generates it and brew audit
+#   objects to its style (no test block, redundant version), which a PR
+#   here can't fix.
+#
+# macOS, because brew audits a cask's on_macos stanzas only on a Mac.
+# "Audit" is a required check on main (safe-settings in unbound-force/.github),
+# so nothing merges, by hand or by gh-hud's auto-merge, until it passes.
+# Release automation pushes straight to main as a repository admin, which
+# that ruleset lets bypass the check.
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Audit
+    runs-on: macos-latest
+    timeout-minutes: 20
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Audit the tap
+        run: |
+          set -euo pipefail
+          # brew reads a tap only once it's registered, and `brew tap
+          # <name> <path>` clones <path>, so this checks the PR's commit.
+          name=ci/candidate
+          brew tap "$name" "$GITHUB_WORKSPACE"
+          brew trust "$name" >/dev/null 2>&1 || true # Homebrew 7 refuses untrusted taps
+
+          brew readall --os=all --arch=all "$name"
+
+          for cask in Casks/*.rb; do
+            cask=$(basename "$cask" .rb)
+            echo "::group::brew audit --cask $cask"
+            brew audit --cask --strict --except=token_conflicts "$name/$cask"
+            echo "::endgroup::"
+          done
